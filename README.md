@@ -48,3 +48,27 @@ mouse_pos ショット範囲の取得（バッチ用）
 バッチファイルでスクリーンショット
 
 shot.bat 連続ショット
+
+
+
+＊通知トレイ
+
+cd-check-dic.py     チェックマーク（辞書型変数を利用）
+
+cd-check.py         チェックマーク
+
+cd-enebaled.py      項目の無効化
+
+cd-icon-chg.py      アイコンの変更（クリックのトグル）
+
+cd-icon.py          通知アイコンのクリック
+
+cd-menu.py          メニュー番号の返却
+
+cd-notify.py        通知機能
+
+cd-pstrayTk.py      Tkinterと共存させる
+
+cd-radio.py         ラジオボタン
+
+cd-submenu.py       サブメニューとセパレータ

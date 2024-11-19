@@ -1,20 +1,13 @@
 """
 ------------------------------------------------------------------------
-
+    
 
 
 ------------------------------------------------------------------------
 """
-
-
 from pystray import Icon, Menu, MenuItem
 from PIL import Image
 
-
-# 表示アイコンの画像
-# imageは青四角
-image = Image.new('RGB', (64, 64), color='blue')
-image2= Image.new('RGB', (64, 64), color='red')
 
 
 def on_clicked(icon, item):
@@ -46,5 +39,7 @@ menu = Menu(
 
 
 # アイコンをトレイに表示
+image = Image.new('RGB', (64, 64), color='blue')
 icon = Icon( "test_icon", image, "My Tray Icon", menu)
 icon.run()
+

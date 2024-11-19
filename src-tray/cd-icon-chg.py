@@ -5,51 +5,45 @@
 
 アイコンをクリックするとアイコンのイメージが変わる
 
-アイコンのイメージは トグルで変わる
+アイコンのイメージをトグル（ON・OFF）で切替える
+
+右クリックのメニュは、1つのメニュー項目があるが非表示設定の為に表示されません
+
+menu = Menu(
+    MenuItem('',   on_clicked, default=True, visible=False),
+    )
 
 
+visible=Falseによりメニューは何も無くなります
 ------------------------------------------------------------------------
 """
 
 
 from pystray import Icon, Menu, MenuItem
-from PIL import Image
-
+from PIL import Image, ImageDraw
 
 # 表示アイコンの画像
 # imageは青四角
+# imageは赤四角
 image = Image.new('RGB', (64, 64), color='blue')
 image2= Image.new('RGB', (64, 64), color='red')
 
 
+
 def on_clicked(icon, item):
     
-    if item.text == "Item1":
-        print("処理1をする")
-
-    if item.text == "Item2":
-        print("処理2をする")
-
-    if item.text == "Item3":
-        print("処理3をする")
-        
-    # ~ メニュー番号順に処理を作成したいなら、次のコードを使うと便利
-    l = len(icon.menu.items)
-    for i in range(l):
-        # ~ print(i, icon.menu.items[i].text, item.text)
-        if icon.menu.items[i].text == item.text:
-            print("選択された項目,No",item.text, i)
-
+    if item.default:
+        if icon.icon == image2:
+            icon.icon = image
+        else:
+            icon.icon = image2
 
 # メニューを定義
 menu = Menu(
-    MenuItem('Item1',   on_clicked),
-    MenuItem('Item2',   on_clicked),
-    MenuItem('Item3',   on_clicked),
+    MenuItem('',on_clicked, default=True, visible=False),
     )
 
 
 
-# アイコンをトレイに表示
 icon = Icon( name="test_icon", icon=image, title="My Tray Icon", menu=menu)
 icon.run()

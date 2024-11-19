@@ -10,6 +10,7 @@
 import tkinter as tk
 from pystray import MenuItem, Icon
 from PIL import Image, ImageDraw
+import sys
 
 
 # タイトルバーの×をクリックでは、プログラムは終了させない
@@ -26,7 +27,12 @@ def quit_program(icon, item):
     icon.stop()
 
     # １秒になっているが、このPCでは1ミリ秒でも問題はない
-    window.after(1, window.quit)
+    # ~ window.after(1, window.quit)
+    # ~ window.after(10, window.destroy)
+    # ~ window.after(0, sys.exit)
+    # ~ window.quit()
+    window.destroy()
+    # ~ sys.exit()
 
 
 

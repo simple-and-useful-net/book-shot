@@ -39,7 +39,5 @@ def screenshot( x1, y1, x2, y2, fname=None, disp=True, bwidth=0, bcolor="red"):
 if __name__ == "__main__":
 
     x1, y1, x2, y2 = 0, 0, 700, 700
-    # screenshot( x1, y1, x2, y2, bcolor="green", bwidth=10 )
-    # screenshot( x1, y1, x2, y2, bwidth=1)
-    screenshot( x1, y1, x2, y2)
+    screenshot( x1, y1, x2, y2, bcolor="green", bwidth=10 )
   

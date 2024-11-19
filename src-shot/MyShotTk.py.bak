@@ -549,6 +549,7 @@ canvas = tk.Canvas(root,
 canvas.pack()
 canvas.place(x=-1, y=-1)
 
+
 root.attributes('-topmost', True)
 root.attributes('-fullscreen', True)
 root.wm_attributes("-transparentcolor", TRANS_COLOR )
@@ -556,9 +557,7 @@ root.resizable(0, 0)
 
 flt = tk.Toplevel(root)     # 別ウィンドウを作成
 flt.overrideredirect(True)  # ウィンドウ枠を削除
-
-# ウィンドウを透明にする。0にすると完全に透明になるが、クリックが背後に流れてしまう。
-flt.wm_attributes("-alpha", ALPHA)  
+flt.wm_attributes("-alpha", 0.002)  # ウィンドウを透明にする。0にすると完全に透明になるが、クリックが背後に流れてしまう。
 
 # flt.geometry(f"{root.winfo_width()}x{root.winfo_height()}+{root.winfo_rootx()}+{root.winfo_rooty()}")
 # flt.lower(root)
