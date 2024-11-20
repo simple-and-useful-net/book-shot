@@ -23,7 +23,9 @@ def on_clicked(icon, item):
     
     if item.text == "表示":
         print("アイコンがクリックされた")
-        
+    
+    # エラーになる
+    # item.enabled=False
 
     if item.text == "項目無効":
         icon.menu = menu2
