@@ -1,6 +1,8 @@
 キンドルから本を出版しました
 
-https://www.amazon.co.jp/dp/B0DNLWJQ5M
+Pythonでスクリーンショットをつくろう！
+
+https://www.amazon.co.jp/dp/B0DP4QGHC4
 
 本書は、自分だけのオリジナルスクリーンショットツールを作りたい方のための実践的ガイドです。Pythonの基礎を学び、TkinterなどのGUI開発に少し触れたことがある方を対象に、ツール開発の楽しさをお届けします。
 
